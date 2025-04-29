@@ -34,7 +34,7 @@ export default function Footer() {
             <p className="text-gray-400 mb-4">
               Spécialiste en plans et permis de construire pour vos projets de
               moins de 150m² en Haute-Savoie. Expertise locale au service de vos
-              projets d'aménagement et de construction.
+              projets d&apos;aménagement et de construction.
             </p>
             <div className="flex space-x-4 mt-6">
               <a
@@ -107,7 +107,7 @@ export default function Footer() {
                   href="#services"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Plans d'aménagement intérieur
+                  Plans d&apos;aménagement intérieur
                 </Link>
               </li>
               <li>
@@ -161,7 +161,7 @@ export default function Footer() {
             variants={fadeIn}
           >
             <h3 className="text-xl font-bold mb-6 text-white">
-              Zones d'intervention
+              Zones d&apos;intervention
             </h3>
             <ul className="space-y-3">
               <li>
@@ -282,9 +282,9 @@ export default function Footer() {
             Plans architecturaux | Permis de construire Haute-Savoie |
             Déclaration préalable de travaux | Plans de maison | Agrandissement
             maison | Extension véranda | Aménagement intérieur | Réglementation
-            urbanisme | Plan local d'urbanisme (PLU) | Rénovation maison | Plan
-            2D | Modélisation 3D | Petits projets construction | Plans maisons
-            individuelles
+            urbanisme | Plan local d&apos;urbanisme (PLU) | Rénovation maison |
+            Plan 2D | Modélisation 3D | Petits projets construction | Plans
+            maisons individuelles
           </p>
         </motion.div>
 
