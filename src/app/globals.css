@@ -3,13 +3,17 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #305544;
+  --primary-dark: #264235;
+  --secondary: #f8fafc;
+  --accent: #f3f4f6;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-montserrat);
+  --font-serif: var(--font-playfair);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +23,92 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans, 'Montserrat', Arial, sans-serif);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+  font-weight: 700;
+}
+
+/* Animation classes */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in forwards;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(20px);
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from { 
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from { 
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Improve button styles */
+button, a {
+  transition: all 0.3s ease;
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
 }
