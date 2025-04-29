@@ -7,6 +7,7 @@ import Contact from "./components/Contact";
 import NavBar from "./components/NavBar";
 import FloatingCTA from "./components/FloatingCTA";
 import CTABanner from "./components/CTABanner";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Expertise />
       <Pricing />
       <Contact />
+      <Footer />
       <FloatingCTA />
     </main>
   );
