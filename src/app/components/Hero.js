@@ -54,7 +54,7 @@ export default function Hero() {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.7 }}
                 >
-                  pour vos Projets &lt; 150 m² autour du Petit-Bornand (74)
+                  pour vos Projets autour du Petit-Bornand (74)
                 </motion.p>
 
                 <motion.p
