@@ -148,6 +148,9 @@ export default function Services() {
           animate={isInView ? "visible" : "hidden"}
           variants={titleVariants}
         >
+          <span className="inline-block py-1 px-3 text-sm rounded-full bg-green-100 text-[#305544] font-medium mb-4">
+            NOS SERVICES
+          </span>
           <h2 className="text-3xl md:text-5xl font-bold text-green-800 mb-6 font-serif">
             Nos Services
           </h2>

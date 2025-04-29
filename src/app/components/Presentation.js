@@ -41,6 +41,11 @@ export default function Presentation() {
 
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="inline-block py-1 px-3 text-sm rounded-full bg-green-100 text-[#305544] font-medium mb-4">
+              À PROPOS
+            </span>
+          </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               className="relative"

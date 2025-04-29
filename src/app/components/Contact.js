@@ -74,6 +74,9 @@ export default function Contact() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6 }}
           >
+            <span className="inline-block py-1 px-3 text-sm rounded-full bg-green-100 text-[#305544] font-medium mb-4">
+              CONTACTEZ-NOUS
+            </span>
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 font-serif">
               Contactez-moi pour une Étude Gratuite
             </h2>
