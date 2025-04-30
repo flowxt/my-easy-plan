@@ -48,7 +48,7 @@ export default function Hero() {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.5 }}
                 >
-                  Plans & Permis de Construire
+                  Plans & Permis de Construire en Haute-Savoie
                 </motion.h1>
 
                 <motion.p
