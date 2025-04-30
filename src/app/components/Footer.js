@@ -316,6 +316,27 @@ export default function Footer() {
           </Link>
         </motion.div>
 
+        {/* Promotion Atypik Code */}
+        <motion.div
+          className="text-center mb-6 bg-[#305544]/10 py-4 px-6 rounded-lg max-w-2xl mx-auto"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+        >
+          <p className="text-gray-300 font-medium">
+            Ce site vous plaît ? Alors n&apos;hésitez pas à jeter un œil à{" "}
+            <a
+              href="https://atypikcode.fr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#4a7b62] hover:text-[#5c8f75] font-bold transition-colors"
+            >
+              atypikcode.fr
+            </a>
+          </p>
+        </motion.div>
+
         {/* Copyright */}
         <div className="text-center text-gray-500 text-sm">
           <p>© {currentYear} My Easy Plan. Tous droits réservés.</p>

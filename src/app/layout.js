@@ -18,7 +18,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  title: "My Easy Plan | Plans et Permis de Construire",
+  title: "My Easy Plan | Plans et Permis de Construire en Haute-Savoie",
   description:
     "Services professionnels de plans et permis de construire pour vos projets inférieurs à 150m² en Haute-Savoie : Petit-Bornand, Bonneville, La Clusaz, La Roche-sur-Foron et dans un rayon de 50km. Expertise en PLU, cadastre et urbanisme.",
   keywords:
