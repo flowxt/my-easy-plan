@@ -94,7 +94,11 @@ export default function Realisations() {
   };
 
   return (
-    <section id="realisations" className="py-24 bg-white" ref={ref}>
+    <section
+      id="realisations"
+      className="py-24 bg-gray-50 relative overflow-hidden"
+      ref={ref}
+    >
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-16"

@@ -142,7 +142,11 @@ export default function Services() {
   };
 
   return (
-    <section className="py-24 bg-gray-50" ref={ref}>
+    <section
+      id="services"
+      className="py-24 bg-gray-50 overflow-hidden"
+      ref={ref}
+    >
       <div className="container mx-auto px-4">
         <motion.div
           className="max-w-3xl mx-auto text-center mb-16"

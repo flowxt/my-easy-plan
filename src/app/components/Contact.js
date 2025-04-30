@@ -46,6 +46,7 @@ export default function Contact() {
 
   return (
     <section
+      id="contact"
       className="py-24 bg-white relative overflow-hidden"
       ref={containerRef}
     >
@@ -234,7 +235,10 @@ export default function Contact() {
                       Zone d&apos;intervention
                     </h4>
                     <p className="text-gray-600">
-                      Le Petit-Bornand-les-Glières et dans un rayon de 50 km
+                      <address className="inline not-italic">
+                        Le Petit-Bornand-les-Glières
+                      </address>{" "}
+                      et dans un rayon de 50 km
                     </p>
                   </div>
                 </motion.div>
@@ -274,9 +278,21 @@ export default function Contact() {
                       Contact direct
                     </h4>
                     <p className="text-gray-600">
-                      Téléphone : 06.72.74.47.39
+                      Téléphone :{" "}
+                      <a
+                        href="tel:0672744739"
+                        className="hover:text-[#305544] transition-colors"
+                      >
+                        06.72.74.47.39
+                      </a>
                       <br />
-                      Email : pringuetlaurie@outlook.fr
+                      Email :{" "}
+                      <a
+                        href="mailto:pringuetlaurie@outlook.fr"
+                        className="hover:text-[#305544] transition-colors"
+                      >
+                        pringuetlaurie@outlook.fr
+                      </a>
                     </p>
                   </div>
                 </motion.div>

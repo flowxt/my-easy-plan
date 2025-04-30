@@ -28,6 +28,7 @@ export default function NavBar() {
     { name: "Services", href: "#services" },
     { name: "Expertise", href: "#expertise" },
     { name: "Tarifs", href: "#pricing" },
+    { name: "Réalisations", href: "#realisations" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -70,7 +71,6 @@ export default function NavBar() {
             </Link>
           </motion.div>
 
-          {/* Navigation pour desktop */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item, index) => (
               <motion.div

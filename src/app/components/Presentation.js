@@ -24,7 +24,11 @@ export default function Presentation() {
   };
 
   return (
-    <section className="py-24 bg-white relative" ref={ref}>
+    <section
+      id="presentation"
+      className="py-24 bg-white relative overflow-hidden"
+      ref={ref}
+    >
       {/* Élément de design - ligne décorative */}
       <motion.div
         className="absolute left-0 top-1/3 w-16 md:w-24 h-[2px] bg-[#305544]/40"
@@ -147,7 +151,7 @@ export default function Presentation() {
                   whileHover={{ y: -5 }}
                 >
                   <div className="text-[#305544] font-bold text-lg mb-1">
-                    2+
+                    3+
                   </div>
                   <div className="text-gray-600 text-sm">
                     Années d&apos;expérience
