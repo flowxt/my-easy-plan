@@ -274,9 +274,9 @@ export default function Contact() {
                       Contact direct
                     </h4>
                     <p className="text-gray-600">
-                      Téléphone : [Votre numéro]
+                      Téléphone : 06.72.74.47.39
                       <br />
-                      Email : [Votre email]
+                      Email : pringuetlaurie@outlook.fr
                     </p>
                   </div>
                 </motion.div>

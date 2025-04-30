@@ -3,6 +3,7 @@ import Presentation from "./components/Presentation";
 import Services from "./components/Services";
 import Expertise from "./components/Expertise";
 import Pricing from "./components/Pricing";
+import Realisations from "./components/Realisations";
 import Contact from "./components/Contact";
 import NavBar from "./components/NavBar";
 import FloatingCTA from "./components/FloatingCTA";
@@ -16,9 +17,10 @@ export default function Home() {
       <Hero />
       <Presentation />
       <Services />
-      <CTABanner />
       <Expertise />
       <Pricing />
+      <Realisations />
+      <CTABanner />
       <Contact />
       <Footer />
       <FloatingCTA />

@@ -107,7 +107,7 @@ export default function Expertise() {
                     Connaissance du terrain
                   </h3>
                   <p className="text-green-100">
-                    Plus de 2 ans d&apos;expérience dans l&apos;architecture
+                    Plus de 3 ans d&apos;expérience dans l&apos;architecture
                     locale
                   </p>
                 </div>

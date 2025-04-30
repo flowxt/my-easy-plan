@@ -22,15 +22,16 @@ const services = [
         "Collecte des documents d'urbanisme nécessaires",
         "Rédaction de la notice descriptive",
         "Réalisation des plans et documents graphiques",
+        "Réalisation de la maquette 3D",
         "Dépôt du dossier en mairie",
         "Suivi de l'instruction",
         "Accompagnement en cas de modifications demandées",
+        "8 pièces complémentaires et plus selon le dossier",
       ],
       advantages: [
         "Conformité avec les règles d'urbanisme",
         "Délai d'instruction réduit (1 mois)",
         "Pas de permis de construire nécessaire",
-        "Économies sur les taxes d'aménagement",
       ],
       examples: [
         "Construction d'une terrasse",
@@ -57,8 +58,7 @@ const services = [
         "Étude des besoins et des envies",
         "Proposition de plusieurs solutions d'aménagement",
         "Réalisation des plans 2D et 3D",
-        "Détail des modifications structurelles",
-        "Plans d'exécution pour les artisans",
+        "Mise en lien avec les professionnels compétents pour l'exécution du projet (bureau d'étude bois et béton)",
       ],
       advantages: [
         "Optimisation de l'espace",
@@ -77,22 +77,24 @@ const services = [
   },
   {
     icon: "🛠️",
-    title: "Accompagnement Complet",
+    title: "Permis de Construire",
     description:
       "Spécialiste des projets d'extension de maison, de rénovation de toiture, de dépendance ou de changement d'usage, je vous guide dans chaque étape.",
     image: "/images/architecte-interieur.jpg",
     color: "from-amber-600 to-amber-800",
     details: {
-      title: "Accompagnement Complet",
+      title: "Dossier de Permis de Construire",
       description:
-        "L'accompagnement complet vous permet de bénéficier d'une expertise professionnelle à chaque étape de votre projet, de la conception à la réalisation.",
+        "Le permis de construire vous permet de bénéficier d'une expertise professionnelle à chaque étape de votre projet, de la conception à la réalisation.",
       steps: [
         "Étude approfondie de votre projet",
         "Analyse des contraintes techniques et administratives",
+        "Étude du PLU",
+        "Réalisation des plans et documents graphiques",
+        "Réalisation de la maquette 3D",
         "Rédaction du dossier complet",
-        "Coordination avec les artisans",
-        "Suivi des démarches administratives",
-        "Assistance lors des visites de chantier",
+        "Dépôt du dossier en mairie",
+        "Suivi de l'instruction",
       ],
       advantages: [
         "Gain de temps considérable",
@@ -229,6 +231,28 @@ export default function Services() {
             </motion.div>
           ))}
         </div>
+
+        {/* Partenariat C&CBAT */}
+        <motion.div
+          className="mt-16 bg-white p-8 rounded-xl shadow-lg border-l-4 border-[#305544]"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ delay: 0.6, duration: 0.5 }}
+        >
+          <h3 className="text-2xl font-bold text-[#305544] mb-4 font-serif flex items-center">
+            <span className="text-2xl mr-3">🤝</span> Partenariat
+          </h3>
+          <p className="text-gray-700 mb-2">
+            My Easy Plan travaille en étroite collaboration avec le bureau
+            d&apos;étude <strong>C&CBAT à Amancy</strong> pour vous offrir des
+            solutions complètes et professionnelles.
+          </p>
+          <p className="text-gray-700">
+            Ce partenariat nous permet de vous proposer une expertise technique
+            approfondie pour tous vos projets de construction et
+            d&apos;aménagement.
+          </p>
+        </motion.div>
       </div>
 
       {/* Modale */}
