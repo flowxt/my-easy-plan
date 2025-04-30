@@ -19,9 +19,26 @@ const playfair = Playfair_Display({
 export const metadata = {
   title: "My Easy Plan | Plans et Permis de Construire",
   description:
-    "Services professionnels de plans et permis de construire pour vos projets inférieurs à 150m² au Petit-Bornand et dans un rayon de 50km.",
+    "Services professionnels de plans et permis de construire pour vos projets inférieurs à 150m² en Haute-Savoie : Petit-Bornand, Bonneville, La Clusaz, La Roche-sur-Foron et dans un rayon de 50km. Expertise en PLU, cadastre et urbanisme.",
   keywords:
-    "permis de construire, plans architecturaux, petit-bornand, déclaration préalable, plans d'aménagement",
+    "permis de construire, plans architecturaux, petit-bornand, déclaration préalable, plans d'aménagement, PLU, cadastre, urbanisme, plan occupation des sols, veranda, extensions de garage, piscine, pose de velux, creation d'ouverture, extension maison, rénovation, aménagement extérieur, Haute-Savoie, Bonneville, La Clusaz, La Roche-sur-Foron, architecte, plans maison",
+  metadataBase: new URL("https://my-easy-plan.com"),
+  openGraph: {
+    title: "My Easy Plan | Plans et Permis de Construire",
+    description:
+      "Services professionnels de plans et permis de construire pour vos projets inférieurs à 150m² en Haute-Savoie : Petit-Bornand, Bonneville, La Clusaz, La Roche-sur-Foron et dans un rayon de 50km.",
+    locale: "fr_FR",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "/",
+  },
+  authors: [{ name: "My Easy Plan" }],
+  category: "Architecture & Urbanisme",
   icons: {
     icon: [
       {
