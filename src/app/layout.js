@@ -1,6 +1,7 @@
 import { Montserrat, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/NavBar";
+import { Analytics } from "@vercel/analytics/react";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -89,6 +90,7 @@ export default function RootLayout({ children }) {
       >
         <NavBar />
         {children}
+        <Analytics />
         <footer className="bg-gray-900 text-white py-8 text-sm">
           <div className="container mx-auto px-4">
             <div className="flex flex-col items-center gap-4 text-center">
