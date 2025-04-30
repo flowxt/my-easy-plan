@@ -123,7 +123,7 @@ export default function Presentation() {
                 </motion.p>
 
                 <motion.p variants={fadeInUp}>
-                  Après m&apos;être formé au dessin dans le bâtiment et à la
+                  Après m&apos;être formée au dessin dans le bâtiment et à la
                   conception bois, et face à la demande croissante des clients
                   pour la réalisation de plans spécifiques pour les dossiers de
                   permis divers, j&apos;ai réalisé la complexité pour les
