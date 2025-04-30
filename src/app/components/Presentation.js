@@ -63,7 +63,7 @@ export default function Presentation() {
             >
               <div className="relative h-[500px] rounded-xl overflow-hidden shadow-xl">
                 <Image
-                  src="/images/stephanie.jpg"
+                  src="/images/laurie.jpeg"
                   alt="Stéphanie - My Easy Plan"
                   fill
                   className="object-cover object-center"
