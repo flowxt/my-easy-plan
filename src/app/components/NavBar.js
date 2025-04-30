@@ -23,7 +23,6 @@ export default function NavBar() {
   }, [scrolled]);
 
   const navItems = [
-    { name: "Accueil", href: "#home" },
     { name: "Présentation", href: "#presentation" },
     { name: "Services", href: "#services" },
     { name: "Expertise", href: "#expertise" },
@@ -55,7 +54,7 @@ export default function NavBar() {
                   alt="My Easy Plan Logo"
                   width={100}
                   height={50}
-                  className="h-auto w-auto"
+                  className="h-auto w-28 sm:w-20"
                 />
                 {scrolled && (
                   <motion.span
@@ -183,6 +182,29 @@ export default function NavBar() {
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 30, stiffness: 300 }}
           >
+            <motion.button
+              className="absolute top-6 right-6"
+              onClick={() => setMobileMenuOpen(false)}
+              whileTap={{ scale: 0.9 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8 text-gray-800"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </motion.button>
             <nav className="container mx-auto px-4 py-6 flex flex-col">
               {navItems.map((item, index) => (
                 <motion.div

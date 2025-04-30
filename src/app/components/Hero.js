@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20"
     >
       {/* Arrière-plan avec superposition de dégradé */}
       <div className="absolute inset-0 z-0">
@@ -39,7 +39,7 @@ export default function Hero() {
                   alt="Logo"
                   width={180}
                   height={90}
-                  className="mb-8 mx-auto md:mx-0"
+                  className="mb-8 mx-auto md:mx-0 hidden md:block"
                 />
 
                 <motion.h1
@@ -122,18 +122,20 @@ export default function Hero() {
               </div>
 
               <motion.div
-                className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-xl transform translate-y-0 md:translate-y-0"
+                className="absolute -bottom-6 -right-6 sm:-right-6 bg-white p-4 sm:p-4 rounded-lg shadow-xl transform translate-y-0 md:translate-y-0 w-auto sm:w-auto min-w-[200px] sm:min-w-0"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 1.2 }}
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-[#305544] bg-opacity-20 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-[#305544] bg-opacity-20 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-2xl text-[#305544]">✓</span>
                   </div>
                   <div>
-                    <p className="font-bold text-[#305544]">Expertise locale</p>
-                    <p className="text-sm text-gray-600">
+                    <p className="font-bold text-[#305544] text-sm sm:text-base">
+                      Expertise locale
+                    </p>
+                    <p className="text-xs sm:text-sm text-gray-600">
                       50 km autour du Petit-Bornand
                     </p>
                   </div>

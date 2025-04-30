@@ -234,12 +234,12 @@ export default function Contact() {
                     <h4 className="font-bold text-gray-900 mb-1">
                       Zone d&apos;intervention
                     </h4>
-                    <p className="text-gray-600">
+                    <div className="text-gray-600">
                       <address className="inline not-italic">
                         Le Petit-Bornand-les-Glières
                       </address>{" "}
                       et dans un rayon de 50 km
-                    </p>
+                    </div>
                   </div>
                 </motion.div>
 

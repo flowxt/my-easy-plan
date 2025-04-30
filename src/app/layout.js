@@ -22,6 +22,45 @@ export const metadata = {
     "Services professionnels de plans et permis de construire pour vos projets inférieurs à 150m² au Petit-Bornand et dans un rayon de 50km.",
   keywords:
     "permis de construire, plans architecturaux, petit-bornand, déclaration préalable, plans d'aménagement",
+  icons: {
+    icon: [
+      {
+        url: "/favicon_myeasyplan/favicon-16x16.png",
+        sizes: "16x16",
+        type: "image/png",
+      },
+      {
+        url: "/favicon_myeasyplan/favicon-32x32.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+      { url: "/favicon_myeasyplan/favicon.ico", sizes: "any" },
+    ],
+    apple: {
+      url: "/favicon_myeasyplan/apple-touch-icon.png",
+      sizes: "180x180",
+      type: "image/png",
+    },
+    other: [
+      { rel: "manifest", url: "/favicon_myeasyplan/site.webmanifest" },
+      {
+        rel: "icon",
+        url: "/favicon_myeasyplan/android-chrome-192x192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        rel: "icon",
+        url: "/favicon_myeasyplan/android-chrome-512x512.png",
+        sizes: "512x512",
+        type: "image/png",
+      },
+    ],
+  },
+};
+
+export const viewport = {
+  themeColor: "#305544",
 };
 
 export default function RootLayout({ children }) {
