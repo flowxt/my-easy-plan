@@ -72,11 +72,20 @@ export default function RootLayout({ children }) {
       >
         <NavBar />
         {children}
-        <footer className="bg-gray-900 text-white py-6 text-center text-sm">
+        <footer className="bg-gray-900 text-white py-8 text-sm">
           <div className="container mx-auto px-4">
-            <p>
-              © {new Date().getFullYear()} My Easy Plan. Tous droits réservés.
-            </p>
+            <div className="flex flex-col items-center gap-4 text-center">
+              <div className="flex items-center gap-6">
+                <a
+                  href="https://atypikcode.fr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-green-300 transition-colors"
+                >
+                  Site réalisé par Atypik Code
+                </a>
+              </div>
+            </div>
           </div>
         </footer>
       </body>
