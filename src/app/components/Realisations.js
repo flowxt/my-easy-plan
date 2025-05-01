@@ -8,7 +8,7 @@ import { useRef } from "react";
 export default function Realisations() {
   const [selectedImage, setSelectedImage] = useState(null);
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const isInView = useInView(ref, { once: true, amount: 0.1, fallback: true });
 
   const projets = [
     {
@@ -102,9 +102,9 @@ export default function Realisations() {
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-16"
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          variants={titleVariants}
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
         >
           <span className="inline-block py-1 px-3 text-sm rounded-full bg-green-100 text-[#305544] font-medium mb-4">
             MES RÉALISATIONS
@@ -118,17 +118,14 @@ export default function Realisations() {
           </p>
         </motion.div>
 
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projets.map((projet) => (
             <motion.div
               key={projet.id}
               className="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
-              variants={itemVariants}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               whileHover={{ y: -10 }}
             >
               <div
@@ -186,7 +183,7 @@ export default function Realisations() {
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
 
       {/* Modal pour afficher l'image en grand */}
