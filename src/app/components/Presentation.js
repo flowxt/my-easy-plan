@@ -98,11 +98,18 @@ export default function Presentation() {
               animate={isInView ? "visible" : "hidden"}
             >
               <motion.h2
-                className="text-3xl font-bold text-[#305544] mb-8 font-serif"
+                className="text-3xl font-bold text-[#305544] mb-3 font-serif"
                 variants={fadeInUp}
               >
                 Mon Parcours & Expérience
               </motion.h2>
+
+              <motion.p
+                className="text-xl text-[#305544]/80 mb-6 italic font-medium"
+                variants={fadeInUp}
+              >
+                Dessinateur Projeteur
+              </motion.p>
 
               <motion.div
                 className="space-y-4 text-gray-700"
