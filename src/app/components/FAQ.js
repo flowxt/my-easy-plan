@@ -25,7 +25,7 @@ export default function FAQ() {
     {
       question: "Comment se déroule notre collaboration ?",
       answer:
-        "Après un premier contact, nous organisons une visite sur site pour évaluer votre projet. Je vous propose ensuite un devis détaillé. Une fois accepté, je réalise les plans et constitue le dossier administratif complet que vous pourrez déposer en mairie. Je reste disponible tout au long du processus pour répondre à vos questions.",
+        "Après un premier contact, nous organisons une visite sur site pour évaluer votre projet. Je vous propose ensuite un devis détaillé. Une fois accepté, je réalise les plans et la maquette 3D, constitue le dossier administratif complet que je déposerai en mairie. Je reste disponible tout au long du processus pour répondre à vos questions.",
     },
     {
       question: "Quels sont vos délais de réalisation ?",
@@ -40,7 +40,7 @@ export default function FAQ() {
     {
       question: "Quels éléments dois-je fournir pour démarrer mon projet ?",
       answer:
-        "Idéalement, vous devriez fournir les plans existants si disponibles, un extrait cadastral (que je peux obtenir), des photos du terrain/bâtiment, et bien sûr vos idées et besoins. Si vous avez déjà des croquis ou des inspirations, c'est encore mieux !",
+        "Idéalement, vous devriez fournir les plans existants si disponibles, des photos du terrain/bâtiment, et bien sûr vos idées et besoins. Si vous avez déjà des croquis ou des inspirations, c'est encore mieux !",
     },
   ];
 

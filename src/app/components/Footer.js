@@ -2,9 +2,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const [showLegalModal, setShowLegalModal] = useState(false);
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -302,12 +304,12 @@ export default function Footer() {
           <Link href="#contact" className="hover:text-white transition-colors">
             Contact
           </Link>
-          <Link
-            href="#"
-            className="hover:text-white transition-colors pointer-events-none opacity-70"
+          <button
+            onClick={() => setShowLegalModal(true)}
+            className="hover:text-white transition-colors"
           >
             Mentions légales
-          </Link>
+          </button>
           <Link
             href="#"
             className="hover:text-white transition-colors pointer-events-none opacity-70"
@@ -342,6 +344,182 @@ export default function Footer() {
           <p>© {currentYear} My Easy Plan. Tous droits réservés.</p>
         </div>
       </div>
+
+      {/* Modale Mentions Légales */}
+      {showLegalModal && (
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-75 flex items-center justify-center p-4">
+          <motion.div
+            className="bg-white text-gray-800 rounded-xl max-w-4xl max-h-[80vh] overflow-y-auto p-8 relative"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3 }}
+          >
+            <button
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+              onClick={() => setShowLegalModal(false)}
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+
+            <h2 className="text-2xl font-bold text-[#305544] mb-6 font-serif">
+              Mentions Légales
+            </h2>
+
+            <div className="space-y-6 text-sm leading-relaxed">
+              <section>
+                <h3 className="text-lg font-semibold mb-2">
+                  1. Informations légales
+                </h3>
+                <p>
+                  <strong>Nom et Prénom :</strong> Laurie PRINGUET
+                  <br />
+                  <strong>Statut :</strong> Auto-entrepreneur
+                  <br />
+                  <strong>Dessinateur projeteur</strong>
+                  <br />
+                  <strong>Adresse :</strong> Le Petit-Bornand-les-Glières, 74130
+                  Glières-Val-de-Borne, Haute-Savoie
+                  <br />
+                  <strong>Téléphone :</strong> 06 72 74 47 39
+                  <br />
+                  <strong>Email :</strong> pringuetlaurie@outlook.fr
+                  <br />
+                  <strong>Siret :</strong> 533 391 561 00032
+                  <br />
+                </p>
+              </section>
+
+              <section>
+                <h3 className="text-lg font-semibold mb-2">
+                  2. Hébergement du site
+                </h3>
+                <p>
+                  <strong>Hébergeur :</strong> Vercel Inc.
+                  <br />
+                  <strong>Adresse :</strong> 340 S Lemon Ave #4133, Walnut, CA
+                  91789, USA
+                  <br />
+                  <strong>Site web :</strong> vercel.com
+                </p>
+              </section>
+
+              <section>
+                <h3 className="text-lg font-semibold mb-2">
+                  3. Propriété intellectuelle
+                </h3>
+                <p>
+                  L&apos;ensemble des éléments constituant ce site (textes,
+                  graphismes, logiciels, photographies, images, sons, plans,
+                  vidéos, noms, logos, marques, etc.) sont la propriété
+                  exclusive de My Easy Plan ou font l&apos;objet d&apos;une
+                  autorisation d&apos;utilisation. Ces éléments sont protégés
+                  par les lois relatives à la propriété intellectuelle.
+                </p>
+                <p>
+                  Toute reproduction ou représentation, totale ou partielle, de
+                  ce site ou de l&apos;un quelconque des éléments qui le
+                  composent, par quelque procédé que ce soit, sans
+                  l&apos;autorisation expresse de My Easy Plan, est interdite et
+                  constituerait une contrefaçon sanctionnée par les articles
+                  L.335-2 et suivants du Code de la propriété intellectuelle.
+                </p>
+              </section>
+
+              <section>
+                <h3 className="text-lg font-semibold mb-2">
+                  4. Protection des données personnelles
+                </h3>
+                <p>
+                  Conformément à la loi Informatique et Libertés du 6 janvier
+                  1978 modifiée et au Règlement Général sur la Protection des
+                  Données (RGPD), vous disposez d&apos;un droit d&apos;accès, de
+                  rectification, d&apos;effacement et de portabilité de vos
+                  données personnelles, ainsi que d&apos;un droit
+                  d&apos;opposition et de limitation du traitement.
+                </p>
+                <p>
+                  Pour exercer vos droits ou pour toute question sur le
+                  traitement de vos données personnelles, vous pouvez contacter
+                  My Easy Plan par email à l&apos;adresse :
+                  pringuetlaurie@outlook.fr
+                </p>
+                <p>
+                  Les informations collectées via le formulaire de contact sont
+                  uniquement destinées à répondre à vos demandes et ne font
+                  l&apos;objet d&apos;aucune cession à des tiers.
+                </p>
+              </section>
+
+              <section>
+                <h3 className="text-lg font-semibold mb-2">5. Cookies</h3>
+                <p>
+                  Ce site utilise des cookies techniques nécessaires à son bon
+                  fonctionnement et des cookies d&apos;analyse de trafic (Google
+                  Analytics) pour améliorer votre expérience. Vous pouvez à tout
+                  moment désactiver ces cookies en paramétrant votre navigateur.
+                </p>
+              </section>
+
+              <section>
+                <h3 className="text-lg font-semibold mb-2">
+                  6. Limitation de responsabilité
+                </h3>
+                <p>
+                  My Easy Plan s&apos;efforce d&apos;assurer l&apos;exactitude
+                  et la mise à jour des informations diffusées sur ce site.
+                  Toutefois, My Easy Plan ne peut garantir l&apos;exactitude, la
+                  précision ou l&apos;exhaustivité des informations mises à
+                  disposition sur ce site.
+                </p>
+                <p>My Easy Plan décline toute responsabilité :</p>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>
+                    Pour toute imprécision, inexactitude ou omission portant sur
+                    des informations disponibles sur le site
+                  </li>
+                  <li>
+                    Pour tous dommages résultant d&apos;une intrusion
+                    frauduleuse d&apos;un tiers ayant entraîné une modification
+                    des informations mises à disposition sur le site
+                  </li>
+                  <li>
+                    Et plus généralement, pour tous dommages, directs ou
+                    indirects, qu&apos;elles qu&apos;en soient les causes,
+                    origines, natures ou conséquences
+                  </li>
+                </ul>
+              </section>
+
+              <section>
+                <h3 className="text-lg font-semibold mb-2">
+                  7. Droit applicable
+                </h3>
+                <p>
+                  Les présentes mentions légales sont soumises au droit
+                  français. En cas de litige, les tribunaux français seront
+                  seuls compétents.
+                </p>
+              </section>
+
+              <p className="mt-6 italic text-gray-500">
+                Dernière mise à jour : {currentYear}
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      )}
     </footer>
   );
 }
