@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 pb-24 md:pb-32"
     >
       {/* Arrière-plan avec superposition de dégradé */}
       <div className="absolute inset-0 z-0">
