@@ -7,6 +7,7 @@ import { useState } from "react";
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const [showLegalModal, setShowLegalModal] = useState(false);
+  const [showPrivacyModal, setShowPrivacyModal] = useState(false);
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -310,12 +311,12 @@ export default function Footer() {
           >
             Mentions légales
           </button>
-          <Link
-            href="#"
-            className="hover:text-white transition-colors pointer-events-none opacity-70"
+          <button
+            onClick={() => setShowPrivacyModal(true)}
+            className="hover:text-white transition-colors"
           >
             Politique de confidentialité
-          </Link>
+          </button>
         </motion.div>
 
         {/* Promotion Atypik Code */}
@@ -516,6 +517,284 @@ export default function Footer() {
               <p className="mt-6 italic text-gray-500">
                 Dernière mise à jour : {currentYear}
               </p>
+            </div>
+          </motion.div>
+        </div>
+      )}
+
+      {/* Modale Politique de confidentialité */}
+      {showPrivacyModal && (
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-75 flex items-center justify-center p-4">
+          <motion.div
+            className="bg-white text-gray-800 rounded-xl max-w-4xl max-h-[80vh] overflow-y-auto p-8 relative"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3 }}
+          >
+            <button
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+              onClick={() => setShowPrivacyModal(false)}
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+
+            <h2 className="text-2xl font-bold text-[#305544] mb-6 font-serif">
+              Politique de Confidentialité
+            </h2>
+
+            <div className="space-y-6 text-sm leading-relaxed">
+              <p className="italic">Dernière mise à jour : {currentYear}</p>
+
+              <section>
+                <h3 className="text-lg font-semibold mb-2">1. Introduction</h3>
+                <p>
+                  My Easy Plan s&apos;engage à protéger la vie privée des
+                  utilisateurs de son site internet. Cette politique de
+                  confidentialité vous informe sur la manière dont nous
+                  recueillons, utilisons et protégeons vos données personnelles
+                  lorsque vous utilisez notre site web.
+                </p>
+                <p>
+                  En utilisant notre site, vous acceptez les pratiques décrites
+                  dans la présente politique de confidentialité. Si vous
+                  n&apos;êtes pas d&apos;accord avec cette politique, veuillez
+                  ne pas utiliser notre site.
+                </p>
+              </section>
+
+              <section>
+                <h3 className="text-lg font-semibold mb-2">
+                  2. Données collectées
+                </h3>
+                <p>Nous collectons les types de données suivants :</p>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>
+                    <strong>Données d&apos;identification :</strong> nom,
+                    prénom, adresse email, numéro de téléphone
+                  </li>
+                  <li>
+                    <strong>Données de localisation :</strong> adresse du projet
+                  </li>
+                  <li>
+                    <strong>Données relatives au projet :</strong> type de
+                    projet, budget, délais
+                  </li>
+                  <li>
+                    <strong>Données de navigation :</strong> adresse IP, type de
+                    navigateur, pages visitées, durée de la visite
+                  </li>
+                </ul>
+              </section>
+
+              <section>
+                <h3 className="text-lg font-semibold mb-2">
+                  3. Méthodes de collecte
+                </h3>
+                <p>
+                  Nous collectons vos données personnelles de différentes
+                  manières :
+                </p>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>Formulaire de contact sur notre site</li>
+                  <li>Correspondance par email, téléphone ou courrier</li>
+                  <li>Cookies et technologies similaires</li>
+                </ul>
+              </section>
+
+              <section>
+                <h3 className="text-lg font-semibold mb-2">
+                  4. Finalités du traitement
+                </h3>
+                <p>
+                  Nous utilisons vos données personnelles pour les finalités
+                  suivantes :
+                </p>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>Répondre à vos demandes de renseignements</li>
+                  <li>Établir un devis pour votre projet</li>
+                  <li>Exécuter les services que vous nous avez demandés</li>
+                  <li>Améliorer notre site web et nos services</li>
+                  <li>Respecter nos obligations légales et réglementaires</li>
+                </ul>
+              </section>
+
+              <section>
+                <h3 className="text-lg font-semibold mb-2">
+                  5. Base légale du traitement
+                </h3>
+                <p>
+                  Nous traitons vos données personnelles sur les bases légales
+                  suivantes :
+                </p>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>
+                    <strong>Consentement :</strong> vous avez expressément
+                    consenti au traitement
+                  </li>
+                  <li>
+                    <strong>Contrat :</strong> le traitement est nécessaire à
+                    l&apos;exécution d&apos;un contrat avec vous
+                  </li>
+                  <li>
+                    <strong>Intérêt légitime :</strong> le traitement est
+                    nécessaire aux fins de nos intérêts légitimes
+                  </li>
+                  <li>
+                    <strong>Obligation légale :</strong> le traitement est
+                    nécessaire pour se conformer à une obligation légale
+                  </li>
+                </ul>
+              </section>
+
+              <section>
+                <h3 className="text-lg font-semibold mb-2">
+                  6. Destinataires des données
+                </h3>
+                <p>
+                  Vos données personnelles sont destinées à My Easy Plan et ne
+                  sont pas partagées avec des tiers, sauf dans les cas suivants
+                  :
+                </p>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>Avec votre consentement explicite</li>
+                  <li>
+                    Si nécessaire pour l&apos;exécution de votre projet
+                    (partenaires, sous-traitants)
+                  </li>
+                  <li>Si requis par la loi ou une décision de justice</li>
+                </ul>
+              </section>
+
+              <section>
+                <h3 className="text-lg font-semibold mb-2">
+                  7. Durée de conservation
+                </h3>
+                <p>
+                  Nous conservons vos données personnelles aussi longtemps que
+                  nécessaire pour réaliser les finalités pour lesquelles elles
+                  ont été collectées, à moins que la loi n&apos;exige ou ne
+                  permette une période de conservation plus longue.
+                </p>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>
+                    Données de prospects : 3 ans à compter du dernier contact
+                  </li>
+                  <li>
+                    Données de clients : 10 ans après la fin de la relation
+                    commerciale (obligation légale)
+                  </li>
+                  <li>Données de navigation : 13 mois maximum</li>
+                </ul>
+              </section>
+
+              <section>
+                <h3 className="text-lg font-semibold mb-2">8. Vos droits</h3>
+                <p>
+                  Conformément à la réglementation applicable en matière de
+                  protection des données personnelles, vous disposez des droits
+                  suivants :
+                </p>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>Droit d&apos;accès à vos données</li>
+                  <li>Droit de rectification des données inexactes</li>
+                  <li>Droit à l&apos;effacement (droit à l&apos;oubli)</li>
+                  <li>Droit à la limitation du traitement</li>
+                  <li>Droit à la portabilité des données</li>
+                  <li>Droit d&apos;opposition au traitement</li>
+                  <li>Droit de retirer votre consentement à tout moment</li>
+                  <li>
+                    Droit d&apos;introduire une réclamation auprès de la CNIL
+                  </li>
+                </ul>
+                <p className="mt-2">
+                  Pour exercer ces droits, vous pouvez nous contacter par email
+                  à pringuetlaurie@outlook.fr ou par courrier à l&apos;adresse
+                  indiquée dans les mentions légales.
+                </p>
+              </section>
+
+              <section>
+                <h3 className="text-lg font-semibold mb-2">9. Cookies</h3>
+                <p>
+                  Notre site utilise des cookies pour améliorer votre expérience
+                  de navigation. Les cookies sont de petits fichiers texte
+                  stockés sur votre appareil qui nous permettent de reconnaître
+                  votre navigateur.
+                </p>
+                <p>Nous utilisons les types de cookies suivants :</p>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>
+                    <strong>Cookies techniques :</strong> nécessaires au
+                    fonctionnement du site
+                  </li>
+                  <li>
+                    <strong>Cookies analytiques :</strong> pour mesurer
+                    l&apos;audience et comprendre comment les visiteurs
+                    utilisent notre site
+                  </li>
+                </ul>
+                <p className="mt-2">
+                  Vous pouvez configurer votre navigateur pour refuser tous les
+                  cookies ou être averti lorsqu&apos;un cookie est envoyé.
+                  Toutefois, certaines fonctionnalités du site peuvent ne pas
+                  fonctionner correctement si les cookies sont désactivés.
+                </p>
+              </section>
+
+              <section>
+                <h3 className="text-lg font-semibold mb-2">
+                  10. Sécurité des données
+                </h3>
+                <p>
+                  Nous mettons en œuvre des mesures techniques et
+                  organisationnelles appropriées pour protéger vos données
+                  personnelles contre la destruction accidentelle ou illicite,
+                  la perte accidentelle, l&apos;altération, la diffusion ou
+                  l&apos;accès non autorisés.
+                </p>
+              </section>
+
+              <section>
+                <h3 className="text-lg font-semibold mb-2">
+                  11. Modifications de la politique de confidentialité
+                </h3>
+                <p>
+                  Nous nous réservons le droit de modifier cette politique de
+                  confidentialité à tout moment. La version la plus récente sera
+                  toujours disponible sur notre site web. Nous vous encourageons
+                  à consulter régulièrement cette page pour rester informé des
+                  éventuelles mises à jour.
+                </p>
+              </section>
+
+              <section>
+                <h3 className="text-lg font-semibold mb-2">12. Contact</h3>
+                <p>
+                  Pour toute question concernant cette politique de
+                  confidentialité ou le traitement de vos données personnelles,
+                  veuillez nous contacter :
+                </p>
+                <p className="mt-2">
+                  <strong>Email :</strong> pringuetlaurie@outlook.fr
+                  <br />
+                  <strong>Téléphone :</strong> 06 72 74 47 39
+                  <br />
+                  <strong>Adresse :</strong> Le Petit-Bornand-les-Glières, 74130
+                  Glières-Val-de-Borne
+                </p>
+              </section>
             </div>
           </motion.div>
         </div>
