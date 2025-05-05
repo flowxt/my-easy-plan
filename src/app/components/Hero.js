@@ -85,8 +85,8 @@ export default function Hero() {
                   transition={{ duration: 0.8, delay: 0.8 }}
                 >
                   Basé près du Petit-Bornand, j&apos;accompagne les particuliers
-                  et artisans de Haute-Savoie dans la réalisation de leurs plans
-                  et dossiers de permis, de A à Z.
+                  de Haute-Savoie dans la réalisation de leurs plans et dossiers
+                  de permis, de A à Z.
                 </motion.p>
 
                 <motion.p
