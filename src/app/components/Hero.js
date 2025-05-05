@@ -25,43 +25,69 @@ export default function Hero() {
         />
       </div>
 
-      <div className="container mx-auto px-4 z-10 py-12 md:py-0">
-        <div className="max-w-5xl mx-auto">
+      <div className="container mx-auto px-4 z-10 py-12">
+        <div className="max-w-6xl mx-auto">
+          {/* Logo centré en haut sur mobile, aligné à gauche sur desktop */}
+          <div className="flex justify-center md:justify-start mb-6">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="hidden md:block"
+            >
+              <Image
+                src="/images/logo.png"
+                alt="Logo"
+                width={160}
+                height={80}
+                className="mx-auto md:mx-0"
+              />
+            </motion.div>
+          </div>
+
+          {/* Titres H1 et H2 sur toute la largeur */}
+          <div className="text-center mb-12">
+            <motion.h1
+              className="text-3xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight font-serif text-white"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+            >
+              Permis de Construire en Haute-Savoie – Simple, Rapide & Abordable
+            </motion.h1>
+
+            <motion.h2
+              className="text-xl md:text-2xl lg:text-3xl font-semibold mb-0 text-green-200 max-w-4xl mx-auto"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              Plans, déclarations préalables et permis de construire pour vos
+              projets de maisons, extensions ou chalets
+            </motion.h2>
+          </div>
+
+          {/* Contenu en deux colonnes: texte et image */}
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             <div className="md:w-1/2 text-white text-center md:text-left">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
               >
-                <Image
-                  src="/images/logo.png"
-                  alt="Logo"
-                  width={180}
-                  height={90}
-                  className="mb-8 mx-auto md:mx-0 hidden md:block"
-                />
-
-                <motion.h1
-                  className="text-4xl md:text-6xl font-bold mb-6 leading-tight font-serif"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 0.5 }}
-                >
-                  Plans & Permis de Construire en Haute-Savoie
-                </motion.h1>
-
                 <motion.p
-                  className="text-xl md:text-2xl text-green-100 mb-8"
+                  className="text-lg md:text-xl text-green-100 mb-6"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 0.7 }}
+                  transition={{ duration: 0.8, delay: 0.8 }}
                 >
-                  pour vos Projets autour du Petit-Bornand (74)
+                  Basé près du Petit-Bornand, j&apos;accompagne les particuliers
+                  et artisans de Haute-Savoie dans la réalisation de leurs plans
+                  et dossiers de permis, de A à Z.
                 </motion.p>
 
                 <motion.p
-                  className="text-lg text-green-50 mb-12"
+                  className="text-base md:text-lg text-green-50 mb-8"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.9 }}
@@ -81,8 +107,8 @@ export default function Hero() {
                 >
                   <motion.a
                     href="#contact"
-                    className="bg-white text-[#305544] hover:bg-green-50 font-bold py-4 px-8 rounded-lg 
-                                transition duration-300 transform hover:scale-105 shadow-lg"
+                    className="bg-white text-[#305544] hover:bg-green-50 font-bold py-3 px-6 rounded-lg 
+                              transition duration-300 transform hover:scale-105 shadow-lg"
                     whileHover={{
                       scale: 1.05,
                       boxShadow:
@@ -94,8 +120,8 @@ export default function Hero() {
                   </motion.a>
                   <motion.a
                     href="#services"
-                    className="border-2 border-white text-white hover:bg-white/10 font-bold py-4 px-8 rounded-lg 
-                                transition duration-300"
+                    className="border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-6 rounded-lg 
+                              transition duration-300"
                     whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -106,12 +132,12 @@ export default function Hero() {
             </div>
 
             <motion.div
-              className="md:w-1/2 relative mt-8 md:mt-0"
+              className="md:w-1/2 relative mt-0"
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0.5 }}
+              transition={{ duration: 1, delay: 0.7 }}
             >
-              <div className="relative h-[400px] md:h-[500px] w-full rounded-lg overflow-hidden shadow-2xl">
+              <div className="relative h-[350px] md:h-[400px] w-full rounded-lg overflow-hidden shadow-2xl">
                 <Image
                   src="/images/plan_manuel.jpg"
                   alt="Plans architecturaux détaillés"
