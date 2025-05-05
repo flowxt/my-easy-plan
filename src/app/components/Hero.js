@@ -53,7 +53,10 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Permis de Construire en Haute-Savoie – Simple, Rapide & Abordable
+              <span className="bg-gradient-to-r from-amber-200 via-yellow-100 to-amber-300 text-transparent bg-clip-text">
+                Permis de Construire en Haute-Savoie
+              </span>{" "}
+              Simple, Rapide & Abordable
             </motion.h1>
 
             <motion.h2
@@ -107,7 +110,7 @@ export default function Hero() {
                 >
                   <motion.a
                     href="#contact"
-                    className="bg-white text-[#305544] hover:bg-green-50 font-bold py-3 px-6 rounded-lg 
+                    className="bg-gradient-to-r from-amber-400 via-yellow-100 to-amber-300 text-[#305544] hover:from-amber-300 hover:to-amber-400 font-bold py-3 px-6 rounded-lg 
                               transition duration-300 transform hover:scale-105 shadow-lg"
                     whileHover={{
                       scale: 1.05,
