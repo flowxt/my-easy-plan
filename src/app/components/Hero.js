@@ -65,8 +65,8 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              Plans, déclarations préalables et permis de construire pour vos
-              projets de maisons, extensions ou chalets
+              Extension, véranda, garage... Je réalise vos plans et dossiers
+              administratifs
             </motion.h2>
           </div>
 
@@ -79,27 +79,13 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.7 }}
               >
                 <motion.p
-                  className="text-lg md:text-xl text-green-100 mb-6"
+                  className="text-lg md:text-xl text-green-100 mb-8"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.8 }}
                 >
                   Basé près du Petit-Bornand, j&apos;accompagne les particuliers
-                  de Haute-Savoie dans la réalisation de leurs plans et dossiers
-                  de permis, de A à Z.
-                </motion.p>
-                {/* build */}
-                <motion.p
-                  className="text-base md:text-lg text-green-50 mb-8"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 0.9 }}
-                >
-                  Vous souhaitez construire une véranda, agrandir votre maison
-                  ou aménager un garage en pièce de vie ? Je vous accompagne
-                  dans toutes vos démarches de permis de construire pour
-                  surfaces inférieures à 150 m², sur Le
-                  Petit-Bornand-les-Glières et dans un rayon de 50 km.
+                  de Haute-Savoie de A à Z dans leurs projets de construction.
                 </motion.p>
 
                 <motion.div
@@ -119,7 +105,7 @@ export default function Hero() {
                     }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    Contactez-moi
+                    Devis gratuit
                   </motion.a>
                   <motion.a
                     href="#services"
@@ -128,7 +114,7 @@ export default function Hero() {
                     whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    Nos services
+                    Mes services
                   </motion.a>
                 </motion.div>
               </motion.div>
