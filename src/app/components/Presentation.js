@@ -64,7 +64,7 @@ export default function Presentation() {
               <div className="relative h-[500px] rounded-xl overflow-hidden shadow-xl">
                 <Image
                   src="/images/laurie.jpeg"
-                  alt="Stéphanie - My Easy Plan"
+                  alt="Laurie Pringuet - Dessinateur projeteur en Haute-Savoie - My Easy Plan"
                   fill
                   className="object-cover object-center"
                 />

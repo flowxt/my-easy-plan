@@ -130,22 +130,22 @@ export default function Footer() {
             variants={fadeIn}
           >
             <h3 className="text-xl font-bold mb-6 text-white">
-              Zones d&apos;intervention
+              Haute-Savoie (74) - Rayon 50km
             </h3>
             <ul className="space-y-3">
               <li>
                 <span className="text-gray-400">
-                  Petit-Bornand-les-Glières (74)
+                  Petit-Bornand-les-Glières
                 </span>
               </li>
               <li>
-                <span className="text-gray-400">La Roche-sur-Foron (74)</span>
+                <span className="text-gray-400">Bonneville</span>
               </li>
               <li>
-                <span className="text-gray-400">Bonneville (74)</span>
+                <span className="text-gray-400">La Roche-sur-Foron</span>
               </li>
               <li>
-                <span className="text-gray-400">Thônes (74)</span>
+                <span className="text-gray-400">Thônes</span>
               </li>
               <li>
                 <span className="text-gray-400">Cluses (74)</span>
@@ -249,6 +249,29 @@ export default function Footer() {
           </motion.div>
         </div>
 
+        {/* Section SEO contenu local */}
+        <motion.div
+          className="border-t border-gray-800 pt-8 mb-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+        >
+          <div className="max-w-5xl mx-auto">
+            <h3 className="text-lg font-semibold text-white mb-4 text-center">
+              Votre dessinateur projeteur en Haute-Savoie (74)
+            </h3>
+            <p className="text-gray-400 text-sm leading-relaxed text-center mb-4">
+              My Easy Plan est votre partenaire local pour tous vos projets de construction et d&apos;aménagement en Haute-Savoie. 
+              Basé près du Petit-Bornand-les-Glières, j&apos;interviens dans un rayon de 50 km incluant Bonneville, La Roche-sur-Foron, 
+              Thônes, La Clusaz, Cluses et Sallanches. Spécialisé dans les <strong>permis de construire</strong> pour les projets 
+              inférieurs à 150m², je vous accompagne également pour vos <strong>déclarations préalables de travaux</strong>, 
+              plans d&apos;extension de maison, plans de véranda, garage et aménagements intérieurs. 
+              Expertise en PLU (Plan Local d&apos;Urbanisme) et connaissance approfondie des règles d&apos;urbanisme locales.
+            </p>
+          </div>
+        </motion.div>
+
         {/* Section des mots-clés SEO */}
         <motion.div
           className="text-center text-xs text-gray-500 mb-8 max-w-4xl mx-auto"
@@ -258,12 +281,10 @@ export default function Footer() {
           variants={fadeIn}
         >
           <p className="mb-2">
-            Plans architecturaux | Permis de construire Haute-Savoie |
-            Déclaration préalable de travaux | Plans de maison | Agrandissement
-            maison | Extension véranda | Aménagement intérieur | Réglementation
-            urbanisme | Plan local d&apos;urbanisme (PLU) | Rénovation maison |
-            Plan 2D | Modélisation 3D | Petits projets construction | Plans
-            maisons individuelles
+            Dessinateur projeteur Haute-Savoie | Permis de construire 74 | Déclaration préalable travaux | 
+            Plans extension maison | Plan véranda Haute-Savoie | Plan garage | Aménagement intérieur | 
+            PLU Haute-Savoie | Petit-Bornand-les-Glières | Bonneville | La Clusaz | Thônes | 
+            Plans architecturaux 74 | Moins de 150m²
           </p>
         </motion.div>
 

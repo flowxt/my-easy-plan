@@ -8,9 +8,9 @@ import { useRef } from "react";
 const services = [
   {
     icon: "✍️",
-    title: "Déclarations Préalables (DP)",
+    title: "Déclarations Préalables de Travaux",
     description:
-      "Pour vos projets de terrasse, balcon, clôture, piscine, changement de façade ou de toiture, je réalise votre déclaration préalable de travaux, conforme aux exigences de votre commune.",
+      "Déclaration préalable (DP) pour piscine, véranda, terrasse, clôture en Haute-Savoie. Dossier conforme aux règles d'urbanisme de votre commune. Délai d'instruction rapide.",
     image: "/images/piscine.jpg",
     color: "from-blue-600 to-blue-800",
     details: {
@@ -46,7 +46,7 @@ const services = [
     icon: "🗺️",
     title: "Plans d'Aménagement Intérieur",
     description:
-      "Je conçois des plans d'aménagement intérieur clairs et sur-mesure : transformation d'un garage en chambre, agrandissement d'un salon, création d'ouverture, pose de Velux, escalier ou mezzanine...",
+      "Plans d'aménagement sur mesure : transformation garage, mezzanine, ouverture mur, pose Velux, escalier. Plans 2D et 3D pour vos projets d'aménagement intérieur en Haute-Savoie.",
     image: "/images/ordinateur_plan2.jpg",
     color: "from-green-600 to-green-800",
     details: {
@@ -77,9 +77,9 @@ const services = [
   },
   {
     icon: "🛠️",
-    title: "Permis de Construire",
+    title: "Permis de Construire (moins de 150m²)",
     description:
-      "Spécialiste des projets d'extension de maison, de rénovation de toiture, de dépendance ou de changement d'usage, je vous guide dans chaque étape.",
+      "Dossier permis de construire pour extension maison, véranda, garage, chalet en Haute-Savoie. Constitution complète du dossier PC, plans, notice, maquette 3D. Suivi instruction mairie.",
     image: "/images/architecte-interieur.jpg",
     color: "from-amber-600 to-amber-800",
     details: {
