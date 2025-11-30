@@ -35,10 +35,10 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "/images/plan_manuel.jpg",
+        url: "https://my-easy-plan.com/images/plan_manuel.jpg",
         width: 1200,
         height: 630,
-        alt: "Plans de permis de construire en Haute-Savoie",
+        alt: "Plans de permis de construire en Haute-Savoie - My Easy Plan",
       },
     ],
   },

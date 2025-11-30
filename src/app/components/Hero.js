@@ -37,7 +37,7 @@ export default function Hero() {
             >
               <Image
                 src="/images/logo.png"
-                alt="Logo"
+                alt="My Easy Plan - Dessinateur projeteur permis de construire Haute-Savoie"
                 width={160}
                 height={80}
                 className="mx-auto md:mx-0"

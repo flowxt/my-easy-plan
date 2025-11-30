@@ -3,6 +3,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import Script from "next/script";
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -48,8 +49,28 @@ export default function FAQ() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  // Schema.org FAQPage pour le SEO
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
   return (
     <section id="faq" className="py-24 bg-white" ref={ref}>
+      {/* Schema.org FAQ pour résultats enrichis Google */}
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-16"
